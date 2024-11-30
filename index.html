@@ -3,42 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Portafolio del Proyecto</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         header {
             background-color: #4CAF50;
-            color: white;
             padding: 1rem;
+            color: white;
             text-align: center;
         }
         nav {
+            display: flex;
+            justify-content: center;
             background-color: #333;
-            padding: 0.5rem;
-            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
-            margin: 0 1rem;
             text-decoration: none;
+            padding: 1rem;
+            margin: 0 0.5rem;
             font-weight: bold;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #4CAF50;
+            border-radius: 5px;
         }
         main {
+            padding: 2rem;
             max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin: auto;
         }
         section {
             margin-bottom: 2rem;
@@ -51,47 +53,72 @@
             padding: 1rem;
             background-color: #333;
             color: white;
-            margin-top: 2rem;
         }
     </style>
+    <script>
+        function navigateTo(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Mi Portafolio</h1>
-        <p>Bienvenido a mi espacio profesional.</p>
+        <h1>Portafolio del Proyecto</h1>
+        <p>Presentando las características del desarrollo de nuestra aplicación</p>
     </header>
 
     <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="javascript:navigateTo('integrantes-descripcion')">Integrantes y Descripción</a>
+        <a href="javascript:navigateTo('user-persona-usabilidad')">User Persona y Usabilidad</a>
+        <a href="javascript:navigateTo('pantallas-aplicacion')">Pantallas</a>
+        <a href="javascript:navigateTo('recorrido-euristicas')">Recorrido y Eurísticas</a>
     </nav>
 
     <main>
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>Hola, soy [Tu Nombre], un apasionado por [tu campo profesional]. Me especializo en [habilidades clave] y disfruto trabajando en proyectos que generan un impacto positivo.</p>
-        </section>
-
-        <section id="proyectos">
-            <h2>Proyectos</h2>
+        <section id="integrantes-descripcion">
+            <h2>Integrantes y Descripción del Proyecto</h2>
+            <p>Este proyecto fue desarrollado por el equipo <strong>[Nombre del equipo]</strong>. Nuestro objetivo es [describir brevemente el propósito y los objetivos de la aplicación].</p>
             <ul>
-                <li><strong>Proyecto 1:</strong> Breve descripción del proyecto. <a href="#" target="_blank">Ver más</a></li>
-                <li><strong>Proyecto 2:</strong> Breve descripción del proyecto. <a href="#" target="_blank">Ver más</a></li>
-                <li><strong>Proyecto 3:</strong> Breve descripción del proyecto. <a href="#" target="_blank">Ver más</a></li>
+                <li><strong>Integrante 1:</strong> [Rol y contribuciones]</li>
+                <li><strong>Integrante 2:</strong> [Rol y contribuciones]</li>
+                <li><strong>Integrante 3:</strong> [Rol y contribuciones]</li>
             </ul>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Si te interesa trabajar conmigo o tienes alguna pregunta, no dudes en contactarme:</p>
-            <p>Email: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
-            <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
+        <section id="user-persona-usabilidad">
+            <h2>User Persona y Test de Usabilidad</h2>
+            <p>Se diseñó un user persona basado en [investigación realizada] para garantizar que la aplicación satisfaga las necesidades de los usuarios. A continuación, se detalla:</p>
+            <ul>
+                <li><strong>Nombre:</strong> [Nombre del user persona]</li>
+                <li><strong>Necesidades:</strong> [Breve descripción]</li>
+                <li><strong>Objetivos:</strong> [Objetivos del usuario]</li>
+            </ul>
+            <p>También se realizaron pruebas de usabilidad para medir la efectividad y experiencia del usuario.</p>
+        </section>
+
+        <section id="pantallas-aplicacion">
+            <h2>Pantallas de la Aplicación</h2>
+            <p>A continuación se presentan las principales pantallas de la aplicación:</p>
+            <ul>
+                <li><strong>Pantalla de Inicio:</strong> [Breve descripción]</li>
+                <li><strong>Pantalla de Usuario:</strong> [Breve descripción]</li>
+                <li><strong>Pantalla de Configuración:</strong> [Breve descripción]</li>
+            </ul>
+        </section>
+
+        <section id="recorrido-euristicas">
+            <h2>Recorrido Cognitivo y Test de Eurísticas</h2>
+            <p>El recorrido cognitivo evaluó cómo los usuarios realizan tareas específicas en la aplicación y qué dificultades encontraron.</p>
+            <p>Además, se realizó un test de eurísticas basado en las reglas de Jakob Nielsen para mejorar la experiencia del usuario.</p>
+            <ul>
+                <li><strong>Eurística 1:</strong> [Problema identificado y solución]</li>
+                <li><strong>Eurística 2:</strong> [Problema identificado y solución]</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+        <p>&copy; 2024 [Nombre del Equipo]. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
