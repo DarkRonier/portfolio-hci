@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantallas de la Aplicación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 180px;
+            height: 390px;
+            object-fit: fill; /* Ajusta el contenido al cuadro */
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            max-width: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pantallas de la Aplicación</h2>
+    <p>Link a prototipos: <a href="https://www.figma.com/proto/DxsjKU0UqWmkiy1hBnkbQZ/HCI---Prototipos?node-id=0-1&t=E1CzMwauElC6nKWp-1" target="_blank">aqui</a></p>
+
+    <div class="container">
+        <div class="gallery">
+            <img src="/resources/pantallas/imagen1.png" alt="Pantalla 1">
+            <img src="/resources/pantallas/imagen2.png" alt="Pantalla 2">
+            <img src="/resources/pantallas/imagen3.png" alt="Pantalla 3">
+            <img src="/resources/pantallas/imagen4.png" alt="Pantalla 4">
+        </div>
+    </div>
+</body>
+</html>
