@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio del Proyecto</title>
+    <title>portafolio del proyecto</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,8 +12,56 @@
             background-color: #f9f9f9;
             color: #333;
         }
+        .header-belt {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .belt-circle {
+            background: #4CAF50;
+            border: 5px solid white;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            z-index: 1;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .belt-rectangle {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            position: absolute;
+            background: #4CAF50a0;
+            border: 5px solid white;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            min-width: 600px;
+            width: 70%;
+            height: 100px;
+            z-index: 0;
+        }
+        .header-desc {
+            width: auto;
+            height: 50px;
+            margin-inline: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            backdrop-filter: blur(10px);
+            color: black;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
         header {
-            background-color: #4CAF50;
+            background-image: url(resources/food-banner.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            backgrou
+            background-size: cover;
             padding: 1rem;
             color: white;
             text-align: center;
@@ -35,7 +83,6 @@
         }
         nav a:hover {
             background-color: #4CAF50;
-            border-radius: 5px;
         }
         iframe {
             width: 100%;
@@ -58,9 +105,12 @@
 </head>
 <body>
     <header>
-        <h1>Portafolio del Proyecto</h1>
-        <h2>Mundo de Recetas</h2>
-        <p>Explora cada sección para conocer más sobre el proyecto</p>
+        <div class="header-belt">
+            <div class="belt-circle">
+                <h1>Mundo de Recetas</h1>
+            </div>
+            <div class="belt-rectangle"></div>
+        </div>
     </header>
 
     <nav>
