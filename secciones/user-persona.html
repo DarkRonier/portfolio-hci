@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Persona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 180px;
+            height: 390px;
+            object-fit: fill; /* Ajusta el contenido al cuadro */
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            max-width: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <section id="user-persona-usabilidad">
+        <h2>User Persona y Test de Usabilidad</h2>
+        <div style="display: flex; gap: 20px;">
+           
+            <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+                <img src="../resources/imagenes/1.jpg" alt="Juan Carlos Bodoque" style="width: 100%;">
+                <h3>Juan Carlos Bodoque (25 años)</h3>
+                <p>Un joven adulto que tiene un trabajo laborioso necesita recetas de comidas nutritivas de fácil y rápida preparación porque le ayudará a organizar mejor su tiempo para cocinar más sano y reducir el consumo de comida chatarra.</p>
+                <div style="display: flex; gap: 10px;">
+                  
+                    <div style="flex: 1;">
+                        <div style="background-color: #f9c74f; padding: 10px; margin-bottom: 10px;">
+                            <h4>Desafíos</h4>
+                            <p>Crear comidas saludables y rápidas debido a su apretada agenda laboral.</p>
+                        </div>
+                        <div style="background-color: #90be6d; padding: 10px;">
+                            <h4>Objetivos</h4>
+                            <p>Mantener una dieta rica en nutrientes que le permita estar activo y concentrado en su trabajo.</p>
+                        </div>
+                    </div>
+                
+                    <div style="flex: 1;">
+                        <div style="background-color: #f94144; padding: 10px; margin-bottom: 10px;">
+                            <h4>Temores</h4>
+                            <p>Desarrollar problemas de salud a largo plazo debido a una dieta deficiente.</p>
+                        </div>
+                        <div style="background-color: #577590; padding: 10px;">
+                            <h4>Frustraciones</h4>
+                            <p>No poder encontrar recetas que sean rápidas, saludables y sabrosas.</p>
+                        </div>
+                        <div style="background-color: #43aa8b; padding: 10px;">
+                            <h4>Necesidades</h4>
+                            <p>Recetas fáciles y rápidas que se adapten a su estilo de vida ocupado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 120px;">
+                    <h4>HMW:</h4>
+                    <p>HMW ayudar a un joven adulto con poco tiempo a preparar comidas nutritivas sin complicaciones?</p>
+                    <p><strong>Solución:</strong> Desarrollar una app con recetas rápidas y saludables, filtradas por tiempo disponible y una lista básica de ingredientes fáciles de conseguir.</p>
+                </div>
+            </div>
+    
+         
+            <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+                <img src="../resources/imagenes/2.jpg" alt="Maria Elizabeth Paredes" style="width: 100%;">
+                <h3>Maria Elizabeth Paredes (35 años)</h3>
+                <p>Una mujer adulta, ama de casa muy ocupada necesita recetas variadas y saludables para su familia, porque así evitará la monotonía y tendrá más ideas para sus comidas.</p>
+                <div style="display: flex; gap: 10px;">
+              
+                    <div style="flex: 1;">
+                        <div style="background-color: #f9c74f; padding: 10px; margin-bottom: 10px;">
+                            <h4>Desafíos</h4>
+                            <p>Cocinar tres comidas al día para su familia e intentar que no se sientan muy repetitivas.</p>
+                        </div>
+                        <div style="background-color: #90be6d; padding: 10px;">
+                            <h4>Objetivos</h4>
+                            <p>Asegurarse de que su familia tenga una dieta balanceada.</p>
+                        </div>
+                    </div>
+             
+                    <div style="flex: 1;">
+                        <div style="background-color: #f94144; padding: 10px; margin-bottom: 10px;">
+                            <h4>Temores</h4>
+                            <p>Temer que su familia no disfrute de las comidas que prepara y que no coman lo suficiente.</p>
+                        </div>
+                        <div style="background-color: #577590; padding: 10px;">
+                            <h4>Frustraciones</h4>
+                            <p>Falta de ideas nuevas para cocinar, cayendo en la rutina de preparar las mismas comidas una y otra vez.</p>
+                        </div>
+                        <div style="background-color: #43aa8b; padding: 10px;">
+                            <h4>Necesidades</h4>
+                            <p>Una fuente confiable de recetas que sean rápidas de preparar, pero que también sean nutritivas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <h4>HMW:</h4>
+                    <p>HMW desarrollar una herramienta que permita a una mujer ama de casa descubrir recetas saludables y variadas rápidamente, adaptadas a los ingredientes que ya tiene en casa?</p>
+                    <p><strong>Solución:</strong> Desarrollar una app móvil donde los usuarios ingresen ingredientes para recibir recetas saludables y variadas. Incluye filtros para dietas específicas y opciones para modificar recetas.</p>
+                </div>
+            </div>
+    
+    
+            <div style="flex: 1; border: 1px solid #ccc; padding: 10px;">
+                <img src="../resources/imagenes/3.png" alt="Jorge Gomez" style="width: 100%;">
+                <h3>Jorge Gomez (20 años)</h3>
+                <p>Un joven universitario con pasión por la cocina pero recursos muy limitados necesita administrar mejor sus recursos y actividades porque quiere dedicar más tiempo a la preparación de sus propias comidas.</p>
+                <div style="display: flex; gap: 10px;">
+             
+                    <div style="flex: 1;">
+                        <div style="background-color: #f9c74f; padding: 10px; margin-bottom: 10px;">
+                            <h4>Desafíos</h4>
+                            <p>Le preocupa el gasto en ingredientes especializados que pueden ser caros.</p>
+                        </div>
+                        <div style="background-color: #90be6d; padding: 10px;">
+                            <h4>Objetivos</h4>
+                            <p>Busca aprender a cocinar rápido y reducir el desperdicio de alimentos.</p>
+                        </div>
+                    </div>
+               
+                    <div style="flex: 1;">
+                        <div style="background-color: #f94144; padding: 10px; margin-bottom: 10px;">
+                            <h4>Temores</h4>
+                            <p>Temor a que las recetas no salgan bien y arruinen eventos o cenas.</p>
+                        </div>
+                        <div style="background-color: #577590; padding: 10px;">
+                            <h4>Frustraciones</h4>
+                            <p>Se frustra con recetas mal explicadas o con instrucciones poco detalladas.</p>
+                        </div>
+                        <div style="background-color: #43aa8b; padding: 10px;">
+                            <h4>Necesidades</h4>
+                            <p>Prefiere recetas con instrucciones detalladas, imágenes o videos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 100px;">
+                    <h4>HMW:</h4>
+                    <p>HMW ayudar a un joven universitario a administrar mejor su tiempo para dedicar más tiempo a la cocina?</p>
+                    <p><strong>Solución:</strong> Crear una herramienta que permita gestionar su tiempo de manera más eficiente, integrando sus actividades diarias y facilitando la planificación de sus momentos para cocinar. Esta herramienta se adaptaría a su ritmo de vida para optimizar el balance entre sus responsabilidades y su pasión por la cocina.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Mapa de Empatía</h2>
+        <p>Utilizamos el mapa de empatía como una herramienta clave para entender profundamente las necesidades, emociones, deseos y frustraciones de nuestros usuarios que usarán la app de recetas de cocina. Esto nos permite diseñar una experiencia centrada en el usuario, alineada con sus objetivos y contextos específicos.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="../resources/imagenes/empatia.jpg" alt="Mapa de Empatía" style="width: 80%; max-width: 800px; border: 1px solid #ccc; padding: 10px;">
+        </div>
+    </section>
+    
+    <section id="resolucion-ux" style="margin-top: 40px;">
+        <h2>Resolución en términos de UX</h2>
+        <h3>Gestión del Tiempo:</h3>
+        <p>
+            La app optimiza el uso del tiempo del usuario, sugiriendo recetas que se ajusten a su disponibilidad diaria. 
+            Cada vez que el usuario abre la app, puede ver recetas rápidas para días ocupados o recetas más elaboradas cuando tiene más tiempo. 
+            El sistema de recordatorios permite que la planificación sea fluida y sencilla.
+        </p>
+        
+        <h3>Uso de Ingredientes:</h3>
+        <p>
+            Los ingredientes son tratados como recursos flexibles. La app sugiere cómo aprovechar los ingredientes que el usuario ya tiene a mano y recomienda alternativas económicas para aquellos que le faltan. 
+            Además, ayuda a evitar el desperdicio de alimentos mediante la sugerencia de recetas que utilizan productos que están por vencer.
+        </p>
+    
+        <h3>Salud y Bienestar:</h3>
+        <p>
+            La salud es central en la experiencia de usuario, con recetas balanceadas que muestran la cantidad de calorías por porción. 
+            Esto permite que el usuario mantenga una dieta equilibrada sin la necesidad de gastar horas planificando cada comida. 
+            Los filtros aseguran que el usuario pueda encontrar opciones saludables en pocos clics.
+        </p>
+    
+        <h3>Planificación Intuitiva:</h3>
+        <p>
+            La planificación de comidas está diseñada para ser una tarea sin estrés. 
+            El usuario no solo puede organizar sus comidas en función de su tiempo y sus ingredientes, sino que también recibe recordatorios automáticos para saber cuándo es el mejor momento para cocinar y cuándo es necesario comprar ingredientes.
+        </p>
+    
+        <h3>Relación entre los Conceptos:</h3>
+        <ul>
+            <li><strong>Tiempo:</strong> El concepto clave es la optimización del tiempo. La app permite al usuario ahorrar tiempo al filtrar recetas según su disponibilidad.</li>
+            <li><strong>Ingredientes:</strong> Se maximiza el uso de los ingredientes disponibles, proporcionando sugerencias para no desperdiciarlos.</li>
+            <li><strong>Salud:</strong> El enfoque está en ofrecer recetas saludables, asegurando que el usuario mantenga un equilibrio nutricional sin esfuerzo adicional.</li>
+        </ul>
+    
+        <h3>Requisitos Clasificados:</h3>
+        <ul>
+            <li><strong>Funcionales:</strong>
+                <ul>
+                    <li>Búsqueda y filtrado de recetas según tiempo, dificultad y calorías.</li>
+                    <li>Sugerencias automáticas basadas en los ingredientes disponibles.</li>
+                    <li>Recordatorios automáticos para cocinar y comprar ingredientes.</li>
+                </ul>
+            </li>
+            <li><strong>No Funcionales:</strong>
+                <ul>
+                    <li>Interfaz limpia y fácil de usar, enfocada en la simplicidad.</li>
+                    <li>Rendimiento rápido y eficiente, con tiempos de respuesta mínimos.</li>
+                    <li>Notificaciones adaptativas que no interrumpen las actividades del usuario.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3>User Experience:</h3>
+        <ul>
+            <li>Modo oscuro para facilitar la lectura en condiciones de poca luz.</li>
+            <li>Las recetas estarán acompañadas de imágenes o videos que ilustren los pasos de preparación de manera clara y atractiva.</li>
+            <li>Posibilidad de guardar recetas favoritas y crear colecciones personales de recetas según sus gustos o necesidades (ej. "Mis recetas rápidas", "Recetas sin lactosa").</li>
+        </ul>
+    
+        <h3>Acciones que podrán realizar los usuarios:</h3>
+        <p>
+            La aplicación permitirá a los usuarios encontrar fácilmente recetas saludables. 
+            Podrán buscar las recetas rápidamente y filtrarlas según el tiempo de preparación o la dificultad de preparación, ya sea que busquen algo rápido o algo más elaborado. 
+            Tendrán acceso a listas de ingredientes detalladas, con sugerencias de sustituciones en caso de que no puedan conseguir un ingrediente o simplemente deseen realizar la comida con lo que tienen en casa. 
+            Podrán organizar sus comidas de la semana de manera sencilla, programando recetas y recibiendo recordatorios para comprar los ingredientes o preparar los platos justo a tiempo.
+        </p>
+        <p>
+            En cuanto a la preparación, la app ofrecerá videotutoriales paso a paso, perfectos para aprender nuevas técnicas culinarias mientras cocinas. 
+            También podrán descargar recetas para poder acceder a ellas incluso sin conexión. 
+            Esta aplicación hará que cocinar saludable sea fácil, accesible y parte de tu rutina diaria.
+        </p>
+
+
+        <h2 style="text-align: center;">Test de Usabilidad</h2>
+        <div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+            
+       
+            <div style="flex: 1; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 style="text-align: center;">Preguntas de Investigación</h3>
+                <ul style="margin-top: 10px;">
+                    <li>¿Es fácil para los usuarios encontrar recetas específicas?</li>
+                    <li>¿Qué características les gustaría añadir?</li>
+                    <li>¿Es clara la organización de las recetas por categorías?</li>
+                    <li>¿La interfaz es intuitiva para usuarios nuevos?</li>
+                    <li>¿Pueden los usuarios guardar o marcar recetas favoritas de forma sencilla?</li>
+                </ul>
+            </div>
+    
+
+            <div style="flex: 1; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 style="text-align: center;">Participantes</h3>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Cantidad:</strong> 5 participantes</li>
+                    <li><strong>Edad:</strong> Entre 16 y 60 años</li>
+                    <li><strong>Experiencia:</strong> Experiencia culinaria básica</li>
+                    <li><strong>Frecuencia:</strong> Cocinan al menos una vez a la semana</li>
+                </ul>
+            </div>
+ 
+            <div style="flex: 1; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 style="text-align: center;">Metodología</h3>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Duración:</strong> 10-15 minutos</li>
+                    <li><strong>Ubicación:</strong> Paraguay, remoto y presencial</li>
+                    <li><strong>Tipo:</strong> Estudio de usabilidad no moderado</li>
+                    <li><strong>Tareas:</strong> Los usuarios completaron una serie de tareas con el prototipo de UX</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 style="text-align: center;">Prototipo Probado</h2>
+        <p style="text-align: center; margin-top: 10px;">
+            Se probó el prototipo de aplicación de baja fidelidad para <strong>Mundo de Recetas</strong> y se puede ver  
+            <a href="https://www.figma.com/proto/DxsjKU0UqWmkiy1hBnkbQZ/HCI---Prototipos?node-id=4-3&node-type=frame&t=21i8mDIiWoeKNSpR-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A3&show-proto-sidebar=1" target="_blank" style="color: #007BFF; text-decoration: none;">
+               Aqui
+            </a>.
+          
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="../resources/pantallas/imagen3.png" alt="pantalla" style="width: 30%; max-width: 800px; border: 1px solid #ccc; padding: 10px;">
+        </div>
+        <h2 style="text-align: center;">Resultados Clave del Estudio de Usabilidad</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; margin-top: 20px;">
+    
+ 
+            <div style="flex: 1; min-width: 300px; max-width: 30%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+                <h3 style="text-align: center;">La gente quiere una interfaz clara y sencilla</h3>
+                <p><strong>Evidencia de apoyo del estudio de usabilidad:</strong></p>
+                <ul>
+                    <li>3 de los 5 participantes necesitaron explorar la interfaz para entender cada módulo.</li>
+                    <li>2 de los 5 participantes dijeron que les gustaría un tutorial al usar la aplicación por primera vez.</li>
+                </ul>
+                <blockquote style="font-style: italic; margin-top: 10px;">
+                    “La interfaz en sí no es confusa, pero te ahorra tiempo si desde el principio te muestra qué hace cada botón.” <br> 
+                    — Josefina Arce, Cocinera, Coronel Bogado
+                </blockquote>
+            </div>
+    
+
+            <div style="flex: 1; min-width: 300px; max-width: 30%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+                <h3 style="text-align: center;">La gente quiere opciones de personalización</h3>
+                <p><strong>Evidencia de apoyo del estudio de usabilidad:</strong></p>
+                <ul>
+                    <li>3 de 5 participantes les gustaría poder personalizar directamente sus recetas recomendadas.</li>
+                    <li>2 de 5 participantes dijeron que les gustaría poder cambiar la paleta de colores de la aplicación.</li>
+                </ul>
+                <blockquote style="font-style: italic; margin-top: 10px;">
+                    “Soy diabético, por lo que me gustaría poder especificar que no quiero recomendaciones de recetas con azúcar.” <br> 
+                    — José Martínez, Estudiante de Medicina, Encarnación
+                </blockquote>
+            </div>
+    
+
+            <div style="flex: 1; min-width: 300px; max-width: 30%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+                <h3 style="text-align: center;">La gente quiere una mejor optimización de visibilidad</h3>
+                <p><strong>Evidencia de apoyo del estudio de usabilidad:</strong></p>
+                <ul>
+                    <li>2 de los 5 participantes en total dijeron que querían tener la opción de ajustar el tamaño del texto en algunas pantallas.</li>
+                </ul>
+                <blockquote style="font-style: italic; margin-top: 10px;">
+                    “En ciertas pantallas el tamaño del texto es muy diferente de otras, haciendo que me cueste más leer los textos más pequeños sin lentes.” <br> 
+                    — Luis Delvalle, Estudiante de Bioquímica, Encarnación
+                </blockquote>
+            </div>
+    
+        </div>
+
+        <h2 style="text-align: center;">Tiempo para Completar las Tareas</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: center;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Usuario</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Tiempo Total</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Media por Tarea</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Usuario 1</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">90 s</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">22,5 s/tarea</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Usuario 2</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">112 s</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">28 s/tarea</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Usuario 3</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">77 s</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">19,2 s/tarea</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Usuario 4</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">67 s</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">16,8 s/tarea</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Usuario 5</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">138 s</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">34,5 s/tarea</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>Total de Tareas</strong></td>
+                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>484 s</strong></td>
+                    <td style="border: 1px solid #ddd; padding: 8px;"><strong>24,2 s/tarea</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 style="text-align: center;">Ratio de Conversión</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; text-align: center;">
+            <thead>
+                <tr>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Tarea</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Tasa de Éxito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Tarea 1</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">4 de 5 Usuarios</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Tarea 2</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">5 de 5 Usuarios</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Tarea 3</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">5 de 5 Usuarios</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">Tarea 4</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">4 de 5 Usuarios</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Grupo 4 - Mundo de Recetas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
