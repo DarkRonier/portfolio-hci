@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Recetas de Cocina</title>
     <style>
+        html {
+            height: 100%;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            height: calc(250px + 100%);
             background-color: #f9f9f9;
             color: #333;
+            overflow-y: scroll;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         .header-belt {
             position: relative;
@@ -31,17 +41,38 @@
         }
         .belt-rectangle {
             display: flex;
-            justify-content: right;
+            justify-content: center;
             align-items: center;
+            gap: calc(200px + 10%);
             position: absolute;
+
             background: #4CAF50a0;
             border: 5px solid white;
             border-radius: 16px;
             backdrop-filter: blur(10px);
+            font-style: italic;
+
             min-width: 600px;
             width: 70%;
             height: 100px;
             z-index: 0;
+        }
+        @media (max-width: 650px) {
+            .belt-rectangle {
+                display: none;
+            }
+            nav a {
+                font-size: 10px;
+            }
+            footer {
+                font-size: 8px;
+            }
+        }
+        @media (max-width: 350px) {
+            iframe {
+                overflow-y: auto;
+                pointer-events: all;
+            }
         }
         .header-desc {
             width: auto;
@@ -61,13 +92,15 @@
             background-position: center;
             background-repeat: repeat;
             background-size: cover;
-            padding: 1rem;
+            height: 250px;
             color: white;
             text-align: center;
         }
         nav {
+            height: 50px;
             display: flex;
             justify-content: center;
+            align-items: center;
             background-color: #333;
             position: sticky;
             top: 0;
@@ -88,18 +121,53 @@
             color: #4CAF50;
         }
         iframe {
-            width: 100%;
-            height: 80vh;
+            flex-grow: 1;
             border: none;
+            overflow: hidden;
+            pointer-events: none;
         }
         footer {
+            height: 40px;
             text-align: center;
-            padding: 1rem;
+            padding-inline: 1rem;
             background-color: #333;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
     <script>
+    // Función para verificar si estamos en el final del scroll
+    function handlePageScroll() {
+        const iframe = document.getElementById('content-frame');
+        const headerHeight = 250; // Altura del header
+        const navHeight = 50; // Altura del nav
+        const footerHeight = 40; // Altura del footer
+
+        const body = document.body;
+        const html = document.documentElement;
+
+        // Altura total de la página (incluyendo header, nav y footer)
+        const pageHeight = Math.max(html.scrollHeight, body.scrollHeight);
+
+        // Calculamos la posición del scroll + la altura visible del navegador
+        const scrollPosition = window.scrollY + window.innerHeight;
+
+        // Si hemos llegado al final de la página (después del footer), habilitar el iframe
+        if (scrollPosition >= pageHeight - footerHeight) {
+            iframe.style.pointerEvents = 'auto';  // Habilitar interacción con el iframe
+        } else {
+            iframe.style.pointerEvents = 'none';  // Bloquear interacción con el iframe
+        }
+    }
+
+    // Detectar cuando el usuario hace scroll
+    window.addEventListener('scroll', handlePageScroll);
+
+    // Inicializar el estado de interacción con el iframe cuando se carga la página
+    handlePageScroll();
+
     function loadSection(htmlFile) {
         // Cambiar el contenido del iframe
         const iframe = document.getElementById("content-frame");
@@ -120,26 +188,35 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="header-belt">
-            <div class="belt-circle">
-                <h1>Mundo de Recetas</h1>
+    <div class="container">
+        <header>
+            <div class="header-belt">
+                <div class="belt-circle">
+                    <h1>Mundo de Recetas</h1>
+                </div>
+                <div class="belt-rectangle">
+                    <div>
+                        <h4>"Sabores que inspiran</h4>
+                    </div>
+                    <div>
+                        <h4>recetas que conectan"</h4>
+                    </div>
+                </div>
             </div>
-            <div class="belt-rectangle"></div>
-        </div>
-    </header>
+        </header>
 
-    <nav>
-        <a href="javascript:loadSection('secciones/descripcion.html')">Integrantes y Descripción</a>
-        <a href="javascript:loadSection('secciones/user-persona.html')">User Personas y Usabilidad</a>
-        <a href="javascript:loadSection('secciones/pantallas.html')">Pantallas</a>
-        <a href="javascript:loadSection('secciones/recorridos.html')">Recorrido y Heurísticas</a>
-    </nav>
+        <nav>
+            <a href="javascript:loadSection('secciones/descripcion.html')">Integrantes y Descripción</a>
+            <a href="javascript:loadSection('secciones/user-persona.html')">User Personas y Usabilidad</a>
+            <a href="javascript:loadSection('secciones/pantallas.html')">Pantallas</a>
+            <a href="javascript:loadSection('secciones/recorridos.html')">Recorrido y Heurísticas</a>
+        </nav>
 
-    <iframe id="content-frame" src="secciones/descripcion.html"></iframe>
+        <iframe id="content-frame" src="secciones/descripcion.html"></iframe>
 
-    <footer>
-        <p>Interacción Hombre-Máquina - 2024 - Biblioteca de Recetas.</p>
-    </footer>
+        <footer>
+            <p>Interacción Hombre-Máquina - 2024 - Biblioteca de Recetas.</p>
+        </footer>
+    </div>
 </body>
 </html>
